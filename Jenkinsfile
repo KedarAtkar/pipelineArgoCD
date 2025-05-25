@@ -5,7 +5,8 @@ pipeline{
             steps{
                 checkout scm
                 script{
-                    cat test.txt
+                    def fileContent = readFile 'test.txt'
+                    echo fileContent
                 }
             }
         }
