@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Checkout"){
             steps{
-                scm Checkout
+                scm checkout
                 script{
                     cat test.txt
                 }
